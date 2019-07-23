@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block body %}
+       <main role="main" class="container">
+
+          <div class="starter-template">
+             <h1>Bootstrap starter template</h1>
+             <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+          </div>
+
+          <table class="table table-dark">
+             <thead>
+             <tr>
+                <th scope="col">#</th>
+                <th scope="col">Names Developers</th>
+             </tr>
+             </thead>
+             <tbody>
+             {% for id,dev in developers %}
+                <tr>
+                   <th scope="row">{{ id }}</th>
+                   <td><a href="{{ path('app_list_projects',{id:dev.id}) }}">{{ dev.name}}</a>
+                </tr>
+
+             {% endfor %}
+
+             </tbody>
+          </table>
+
+       </main><!-- /.container -->
+{% endblock %}

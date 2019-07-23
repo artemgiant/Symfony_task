@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Starter Template · Bootstrap</title>
+</head>
+<body>
+{% block header %}
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('app_homepage') }}">Home <span class="sr-only"></span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+{%  endblock  %}
+{% block body %}
+
+{% endblock  %}
+<script scr="{{ asset('build/js/app.js') }}"></script>
+
+</body>
+
+</html>
